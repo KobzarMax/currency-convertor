@@ -1,0 +1,32 @@
+.wrapper {
+	display: flex;
+	padding: 40px 20px;
+	justify-content: center;
+	align-items: center;
+}
+.currency {
+	display: flex;
+	flex-direction: column;
+}
+.currency__input {
+	width: 300px;
+}
+[mat-icon-button] {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+mat-label {
+  color: #ffffff;
+}
+.mat-form-field {
+  background-color: transparent;
+}
+.mat-select-arrow {
+  background-color: #000000;
+}
+.material-icons {
+  color: #000000;
+}
+.mat-input-element {
+  color: #ffffff;
+}

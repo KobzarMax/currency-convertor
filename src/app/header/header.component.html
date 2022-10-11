@@ -1,0 +1,13 @@
+<header>
+	<h2 class="header__title">Currency converter</h2>
+	<ul class="header-currency-list">
+		<ng-container *ngIf="curentCurrency | async as currencyInfo">
+			<li class="header-currency-list__item" *ngFor="let item of currencyInfo">
+				<ng-container *ngIf="item.ccy !== 'BTC'">
+					<span class="buy">{{ item.ccy }} {{ item.buy | slice: 0:5 }}</span>
+          <span class="sale">{{ item.ccy }} {{ item.sale | slice: 0:5 }}</span>
+				</ng-container>
+			</li>
+		</ng-container>
+	</ul>
+</header>

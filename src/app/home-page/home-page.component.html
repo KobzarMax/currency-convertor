@@ -1,0 +1,51 @@
+<div class="wrapper">
+	<div class="currency first-currency">
+		<mat-form-field appearance="fill">
+			<mat-label>Currency</mat-label>
+			<mat-select [(ngModel)]="selectOne" (selectionChange)="onChangeSelect()">
+				<mat-option value="USD">USD</mat-option>
+				<mat-option value="EUR">EUR</mat-option>
+				<mat-option value="UAH">UAH</mat-option>
+			</mat-select>
+		</mat-form-field>
+		<mat-form-field appearance="fill">
+			<mat-label>Value</mat-label>
+			<input
+				(input)="getOneInpValue($event)"
+				matInput
+				id="inpOne"
+				type="number"
+				[(ngModel)]="inptOneValue" />
+		</mat-form-field>
+	</div>
+
+	<button
+		mat-icon-button
+		color="primary"
+		aria-label="Example icon button with a compare_arrows"
+		(click)="change()">
+		<span class="material-icons"> compare_arrows </span>
+	</button>
+
+	<div class="currency second-currency">
+		<mat-form-field appearance="fill">
+			<mat-label>Currency</mat-label>
+			<mat-select [(ngModel)]="selectTwo" (selectionChange)="onChangeSelect()">
+				<mat-option value="USD">USD</mat-option>
+				<mat-option value="EUR">EUR</mat-option>
+				<mat-option value="UAH">UAH</mat-option>
+			</mat-select>
+		</mat-form-field>
+		<mat-form-field appearance="fill">
+			<mat-label>Value</mat-label>
+			<input
+				(input)="getTwoInpValue($event)"
+				matInput
+				matInput
+				id="inpTwo"
+				type="number"
+				value="resultValInpTwo"
+				[(ngModel)]="inputTwoValue" />
+		</mat-form-field>
+	</div>
+</div>
